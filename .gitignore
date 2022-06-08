@@ -1,0 +1,24 @@
+venv/
+
+
+first_path = driver.find_element(
+    by=By.XPATH,
+    value="/html/body/div[1]/div/div/div[3]/div/div[2]/div/div/div/div[11]/div/div/div/div[2]",
+)
+first_path.click()
+
+# ----------------------------------------------------------------
+
+actionChains = ActionChains(driver)
+
+text_box = driver.find_element(
+    by=By.XPATH, value='//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]'
+)
+
+
+actionChains.move_to_element(first_path).click().perform()
+actionChains.move_to_element(first_path).send_keys(
+    f"https://wa.me/{self_phone}", Keys.RETURN
+).perform()
+
+driver.find_elements_by_class_name()
