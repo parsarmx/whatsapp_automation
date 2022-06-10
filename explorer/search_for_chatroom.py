@@ -7,11 +7,7 @@ from explorer import select_send_message_section
 from explorer.send_message import send_hyper_link_message
 
 
-def search_chatroom(xpath):
-    self_message = input(
-        "please enter the name of chatroom that you want to send the first message: "
-    )
-
+def search_chatroom(xpath, self_message, phone_number):
     first_path = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
     actionChains.move_to_element(first_path).click().perform()
 
@@ -19,5 +15,5 @@ def search_chatroom(xpath):
         self_message, Keys.RETURN
     ).perform()
 
-    send_hyper_link_message("989353431049")
+    send_hyper_link_message(phone_number)
     return

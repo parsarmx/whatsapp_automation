@@ -7,4 +7,4 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # //*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]
 def select_send_message_section(xpath):
-    return wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+    return
