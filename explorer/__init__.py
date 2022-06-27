@@ -1,5 +1,5 @@
 from explorer.find_conversation_panel import find_conversation_panel
+from explorer.forward_message import forward_message
 from explorer.search_for_chatroom import search_chatroom
-
-# from explorer.select_send_message_section import select_send_message_section
+from explorer.select_message import select_last_message
 from explorer.send_message import send_hyper_link_message, send_message

@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
-from explorer import select_send_message_section
 from explorer.send_message import send_hyper_link_message
 
 

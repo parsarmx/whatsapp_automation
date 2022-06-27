@@ -1,1 +1,1 @@
-from config.config import driver, actionChains, wait
+from config.config import actionChains, driver, wait
