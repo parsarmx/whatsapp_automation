@@ -20,7 +20,7 @@ def send_hyper_link_message(phone_number):
     actionChains.move_to_element(chat_section).send_keys(
         text, Keys.RETURN
     ).perform()
-    return find_conversation_panel("_3K4-L", "_2wUmf")
+    return find_conversation_panel("_3K4-L", "_2wUmf").click()
 
 
 def send_message(message):

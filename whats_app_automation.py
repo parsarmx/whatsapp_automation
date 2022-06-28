@@ -16,7 +16,6 @@ if __name__ == "__main__":
     phone_number = input()
 
     forward_message(self_message, phone_number)
-    select_last_message()
     # search_chatroom(
     #     '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]',
     #     self_message,

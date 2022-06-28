@@ -2,8 +2,9 @@ import time
 
 from config import actionChains, wait
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
+
+from explorer import find_last_message
 
 
 def select_last_message():
@@ -21,7 +22,4 @@ def select_last_message():
     time.sleep(1)
     actionChains.move_to_element(navbar_sections).double_click().perform()
 
-    chatroom = wait.until(
-        EC.presence_of_element_located((By.CLASS_NAME, class_name))
-    )
-    all_child_by_class = chatroom.find_elements(By.CLASS_NAME, child_name)
+    return find_last_message("_3K4-L", "_2wUmf").click()

@@ -14,5 +14,4 @@ def search_chatroom(xpath, self_message, phone_number):
         self_message, Keys.RETURN
     ).perform()
 
-    send_hyper_link_message(phone_number)
-    return
+    return send_hyper_link_message(phone_number)

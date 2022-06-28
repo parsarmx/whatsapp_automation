@@ -1,7 +1,17 @@
+import time
+
 from config import actionChains, wait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
+
+from explorer.pop_up_search import (
+    forward,
+    pop_up_search,
+    pop_up_select_checkbox,
+)
+from explorer.select_forward_button import select_forward_button
+from explorer.select_message import select_last_message
 
 
 def forward_message(message_path, send_message_to):
@@ -15,4 +25,13 @@ def forward_message(message_path, send_message_to):
         message_path, Keys.RETURN
     ).perform()
 
-    return
+    select_last_message()
+
+    select_forward_button()
+
+    pop_up_search(send_message_to)
+
+    time.sleep(1.2)
+    pop_up_select_checkbox().click()
+
+    forward()
